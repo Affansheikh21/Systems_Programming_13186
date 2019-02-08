@@ -36,7 +36,6 @@ while(readinput >0){
 end = clock();
 
 total_time = ((double) (end - start)) / CLOCKS_PER_SEC;
-printf("\nTime taken to copy 100MB data from source file to destination file with buffer size 1000: %f seconds", total_time);
 close(f1);
 close(f2);
 
