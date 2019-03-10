@@ -1,0 +1,13 @@
+/* if you open a Read_only file in:
+- RDONLY : NO ERRORS
+- WR_ONLY : EACCESS; ERRNO 13
+- RDWR : EACCESS; ERRNO 13
+
+/* if you open a Write_only file in:
+- RDONLY : EACCESS; ERRNO 13
+- WR_ONLY : NO ERRORS
+- RDWR : EACCESS; ERRNO 13
+
+/* WRONF FILE NAMES
+WRONG FILE NAME:
+- ENOENT; ERRNO 13
