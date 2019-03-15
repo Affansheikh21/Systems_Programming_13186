@@ -25,7 +25,23 @@ int rfs =read(STDIN_FILENO,input,50);
         }
 
 printf("%d",count);
+            if (count == 0) {
 
+                // remove enter key;
+                if (input[strlen(input)-1] = "\0") {
+                    input[strlen(input)-1] = 0;
+
+                }
+
+                int ret=0;
+                char * args[] = {input,NULL};
+                ret = execvp(input,args);
+                    if (ret == -1) {
+                      //  printf("%d\n",errno);
+
+                    }
+
+            }
 
 
             if (count == 1) {
@@ -35,8 +51,8 @@ printf("%d",count);
             token = strtok(input, " ");
 
             char * execname = token;
-            printf("%s\n",token);
-            printf("%d",strlen(token));
+            //printf("%s\n",token);
+            //printf("%d",strlen(token));
 
 
             char * filename = NULL;
@@ -50,8 +66,8 @@ printf("%d",count);
             }
 
              filename = token;
-            printf("%s\n",token);
-            printf("%d",strlen(token));
+            //printf("%s\n",token);
+            //printf("%d",strlen(token));
 
 
 
@@ -61,7 +77,7 @@ printf("%d",count);
 
                 ret = execvp(execname,args);
                     if (ret == -1) {
-                        printf("%d\n",errno);
+              //          printf("%d\n",errno);
 
                     }
 
@@ -74,26 +90,16 @@ printf("%d",count);
             }
 
 /*
-
     if (input[rfs-1]){
         input[rfs-1] = 0;
    // printf("%s",input);
  //   printf("%d",strlen(input));
     }
-
-
     char * args[] = {input,NULL};
     int ret=0;
-
     ret = execvp(input,args);
         if (ret == -1) {
-            printf("%d\n",errno);
-
+            printf( "%d\n",errno);
         }
-
-
-
-
-
 */
 }
