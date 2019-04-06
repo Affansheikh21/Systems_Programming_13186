@@ -35,7 +35,7 @@ int main()
         char str[100];
         while (1)
         {
-            read(STDIN_FILENO, str, 20);
+            read(STDIN_FILENO, str, 20); 
             write(fd1[1], str, strlen(str) + 1);
             read(fd2[0], str, 100);
             write(STDOUT_FILENO, str, strlen(str));
