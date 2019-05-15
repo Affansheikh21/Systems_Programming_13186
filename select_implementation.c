@@ -28,7 +28,7 @@ FD_SET(STDIN_FILENO,&fd);
         }
 
         else if (!ret) {
-            printf("Time elapsed: %d\n",tv.tv_sec);
+            printf("Time elapsed: %d\n",5);
         }
 
         if (__FD_ISSET(STDIN_FILENO,&fd) ) {
@@ -36,7 +36,7 @@ FD_SET(STDIN_FILENO,&fd);
             char buff[MAX_SIZE];
             int r = read(STDIN_FILENO,buff,100);
             write(STDOUT_FILENO,buff,strlen(buff));
-            printf("Time remained: %d\n",tv.tv_sec);
+            printf("Time that was remaining: %d\n",tv.tv_sec);
         }
 
 
